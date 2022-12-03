@@ -46,8 +46,16 @@ class Panel {
   }
 
   setValue(value) {
+    const sizeList = [
+      0,
+      CELL_SIZE / 2,
+      CELL_SIZE / 2,
+      CELL_SIZE / 2.5,
+      CELL_SIZE / 3
+    ];
     this.value = value;
     this.div.textContent = value;
+    this.div.style.fontSize = `${sizeList[String(value).length]}px`;
   }
 
   setPosition(x, y) {
